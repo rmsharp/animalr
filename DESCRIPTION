@@ -1,0 +1,23 @@
+Package: animalr
+Type: Package
+Title: Provides Useful Functions for the SNPRC animal Database
+Version: 0.1.81
+Date: 2017-03-25
+Author: R. Mark Sharp <msharp@TxBiomed.org>
+Maintainer: R. Mark Sharp <msharp@TxBiomed.org>
+Description: Provides tools for the SNPRC animal database.
+Depends:
+    R (>= 3.2.1)
+Imports:
+    anytime,
+    lubridate,
+    magrittr,
+    rmsutilityr,
+    RODBC,
+    stringi
+Suggests:
+    dplyr,
+    testthat (>= 0.7.1)
+License: GPL-2
+RoxygenNote: 6.0.1
+LazyData: TRUE
