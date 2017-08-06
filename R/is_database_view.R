@@ -8,10 +8,10 @@
 #' @import RODBC
 #' @import stringi
 #' @export
-is_database_tbl <- function(conn, view_name, schema = "DBO") {
+is_database_view <- function(conn, view_name, schema = "DBO") {
   sql_txt <- stri_c(
     "SELECT count(1) FROM INFORMATION_SCHEMA.VIEWS
     WHERE TABLE_NAME='", view_name, "'
-      AND TABLE_SCHEMA = '", schema, "') ")
-  sqlQuery(conn, sql_txt)$result > 0
+      AND TABLE_SCHEMA = '", schema, "' ")
+  sqlQuery(conn, sql_txt) > 0
 }
