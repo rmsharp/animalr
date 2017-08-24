@@ -1,7 +1,6 @@
 #' Creates v_animal_age_location_sex_species as a view in animal database if
 #' it does not already exists.
 #' @param conn database connection object
-#' @import animalr
 #' @import RODBC
 #' @import stringi
 #' @export
