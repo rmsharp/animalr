@@ -9,7 +9,7 @@
 #' @import rmsutilityr
 #' @import stringi
 #' @export
-add_birth_date <- function(conn, id_df) {
+add_death_date <- function(conn, id_df) {
   ids <- id_df$id[!is.na(id_df$id)]
   ids_str <- vector2string(unique(blank_fill_ids(ids)), SS = "','")
   death_dates_df <- sqlQuery(conn, stri_c(
