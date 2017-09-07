@@ -1,8 +1,8 @@
 Package: animalr
 Type: Package
 Title: Provides Useful Functions for the SNPRC animal Database
-Version: 0.1.85
-Date: 2017-08-06
+Version: 0.1.86
+Date: 2017-09-07
 Author: R. Mark Sharp <msharp@TxBiomed.org>
 Maintainer: R. Mark Sharp <msharp@TxBiomed.org>
 Description: Provides tools for the SNPRC animal database.
