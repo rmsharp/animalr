@@ -18,6 +18,8 @@ Imports:
 Suggests:
     dplyr,
     testthat (>= 0.7.1)
+Remotes:
+    rmsharp/rmsutilityr
 License: GPL-2
 RoxygenNote: 6.0.1
 LazyData: TRUE
