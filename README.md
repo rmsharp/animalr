@@ -49,7 +49,7 @@ install_from_source(source_names, source_path, install_path)
 
 ### Github.com Installation
 
-It is much easier to install directly from [github.com/rmsharp/animalr](https://github.com/rmsharp/animalr) as all of the dependencies are automatically installed as well.
+It is much easier to install directly from [github.com/rmsharp/animalr](https://github.com/rmsharp/animalr) as all of the dependencies are automatically installed.
 
 You can install **animalr** from github with:
 
