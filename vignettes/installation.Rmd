@@ -1,0 +1,71 @@
+---
+title: "Installation"
+author: "R. Mark Sharp, Ph.D."
+date: "11/1/2017"
+output: html_document
+---
+
+# animalr
+## Installation
+
+### Installation from Source
+__rmsutilityr__ is a local source packages that must be installed prior to 
+installing __animalr__.
+
+For example, a very manual approach is to use the following code, which
+assumes you have all of the dependencies already installed:
+```{r install-rmsutilityr, include = TRUE, eval = FALSE}
+install_path <- "c:/R Library"
+source_path <- "d:Labkey data"
+source <- "rmsutilityr.1.0.56.tar.gz"
+install.packages(paste0(source_path, "/", source), type = "source", repos = NULL,
+                     lib = install_path)
+source <- "animalr.0.1.86.tar.gz"
+install.packages(paste0(source_path, "/", source), type = "source", repos = NULL,
+                     lib = install_path)
+
+```
+One or more of these will fail if you do not have the dependencies already 
+installed, but the error message will provide the name(s) of the packages 
+needed.
+However, as soon as one of the source packages is updated that code no longer 
+work because the filename is wrong.
+
+Assuming you have a version of __rmsutilityr__ installed you can simply use 
+the following code, which will find all of the dependencies, install them,
+locate the most recent source versions of the packages __rmsutilityr__,
+__animalr__, and __animalr__, find th.
+```{r semi-auto-install, eval = FALSE, include = TRUE}
+library(rmsutilityr)
+source_names <- c("rmsutilityr", "animalr")
+source_path <- "d:Labkey data/"
+## dependencies becomes the collection of packages needed to support our
+## custom packages
+dependencies <- make_package_dependency_list(source_names, source_path)
+## We are installing binary packages first and then our local source
+dependencies <- remove_these_str(dependencies, expunge = source_names)
+install.packages(dependencies, type = "binary",
+                 repos = "https://cran.revolutionanalytics.com",
+                 lib = lib_path)
+update.packages(lib.loc = lib_path,
+                repos = "https://cran.revolutionanalytics.com", ask = FALSE)
+
+install_from_source(source_names, source_path, install_path)
+
+```
+
+### Github.com Installation
+
+It is much easier to install directly from
+[github.com/rmsharp/animalr](https://github.com/rmsharp/animalr) as all of 
+the dependencies are automatically installed as well.
+
+You can install **animalr** from github with:
+
+```{r gh-installation, eval = FALSE}
+install.packages("devtools")
+devtools::install_github("rmsharp/animalr")
+
+```
+
+All missing dependencies should be automatically installed.
