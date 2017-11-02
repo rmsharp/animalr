@@ -34,7 +34,7 @@ work because the filename is wrong.
 Assuming you have a version of __rmsutilityr__ installed you can simply use 
 the following code, which will find all of the dependencies, install them,
 locate the most recent source versions of the packages __rmsutilityr__,
-__animalr__, and __animalr__, find th.
+__animalr__, and __animalr__, and install them.
 ```{r semi-auto-install, eval = FALSE, include = TRUE}
 library(rmsutilityr)
 source_names <- c("rmsutilityr", "animalr")

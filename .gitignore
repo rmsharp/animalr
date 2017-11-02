@@ -5,3 +5,5 @@
 !man/*
 !NAMESPACE
 .MySCMServerInfo
+installation.*
+!installation.Rmd

@@ -27,7 +27,7 @@ install.packages(paste0(source_path, "/", source), type = "source", repos = NULL
 
 One or more of these will fail if you do not have the dependencies already installed, but the error message will provide the name(s) of the packages needed. However, as soon as one of the source packages is updated that code no longer work because the filename is wrong.
 
-Assuming you have a version of **rmsutilityr** installed you can simply use the following code, which will find all of the dependencies, install them, locate the most recent source versions of the packages **rmsutilityr**, **animalr**, and **animalr**, find th.
+Assuming you have a version of **rmsutilityr** installed you can simply use the following code, which will find all of the dependencies, install them, locate the most recent source versions of the packages **rmsutilityr**, **animalr**, and **animalr**, and install them.
 
 ``` r
 library(rmsutilityr)
@@ -49,7 +49,7 @@ install_from_source(source_names, source_path, install_path)
 
 ### Github.com Installation
 
-It is much easier to install directly from [github.com/rmsharp/animalr](https://github.com/rmsharp/animalr) as all of the dependencies are automatically installed.
+It is much easier to install directly from [github.com/rmsharp/animalr](https://github.com/rmsharp/animalr) as all of the dependencies are automatically installed as well.
 
 You can install **animalr** from github with:
 

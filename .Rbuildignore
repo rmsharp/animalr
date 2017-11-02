@@ -2,4 +2,4 @@
 ^\.Rproj\.user$
 ^.*.MySCMServerInfo
 ^\.travis\.yml$
-installation.Rmd
+installation.*
