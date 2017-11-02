@@ -1,9 +1,13 @@
 language: r
 cache: packages
+dist: trusty
+r: release
+before_install:
+  - sudo R CMD javareconf,
+  - Rscript -e 'install.packages("rJava", type = "source")'
 r_github_packages:
-  - jimhester/covr
-r_github_packages:
-  rmsharp/rmsutilityr
+  - jimhester/covr,
+  - rmsharp/rmsutilityr
 after_success:
   - Rscript -e 'covr::codecov()'
 sudo: false
