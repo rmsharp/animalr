@@ -3,3 +3,4 @@
 ^.*.MySCMServerInfo
 ^\.travis\.yml$
 installation.*
+README.Rmd
