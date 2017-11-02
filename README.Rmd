@@ -16,6 +16,6 @@ knitr::opts_chunk$set(
 ```
 
 
-```{r child = "vignettes/installation.Rmd", ref = "installation"}
+```{r child = "installation.Rmd", ref = "installation"}
 ```
 
