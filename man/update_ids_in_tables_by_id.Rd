@@ -5,8 +5,13 @@
 \title{Returns the number of rows updated when old Ids are replaced by replacement Ids
 in one or more database tables.}
 \usage{
-update_ids_in_tables_by_id(conn, table_names, old_ids, replacement_ids,
-  owner = "dbo")
+update_ids_in_tables_by_id(
+  conn,
+  table_names,
+  old_ids,
+  replacement_ids,
+  owner = "dbo"
+)
 }
 \arguments{
 \item{conn}{database connection object}

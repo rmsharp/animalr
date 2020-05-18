@@ -4,9 +4,12 @@
 \alias{get_dams_with_infants}
 \title{Dams with infants within a specified date range of provided.}
 \usage{
-get_dams_with_infants(conn, arc_species_code,
+get_dams_with_infants(
+  conn,
+  arc_species_code,
   current_date = strftime(Sys.Date(), format = "\%m-\%d-\%Y"),
-  days_as_infant = 180)
+  days_as_infant = 180
+)
 }
 \arguments{
 \item{conn}{database connection object}

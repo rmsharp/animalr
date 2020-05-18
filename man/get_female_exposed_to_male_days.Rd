@@ -4,9 +4,15 @@
 \alias{get_female_exposed_to_male_days}
 \title{Get number of days females were exposed to fertile males.}
 \usage{
-get_female_exposed_to_male_days(conn, arc_species_code = "PC",
-  min_date = "01-01-2014", max_date = strftime(Sys.Date(), format =
-  "\%m-\%d-\%Y"), male_age = 48, female_age = 42, gestation_length = 183)
+get_female_exposed_to_male_days(
+  conn,
+  arc_species_code = "PC",
+  min_date = "01-01-2014",
+  max_date = strftime(Sys.Date(), format = "\%m-\%d-\%Y"),
+  male_age = 48,
+  female_age = 42,
+  gestation_length = 183
+)
 }
 \arguments{
 \item{conn}{database connection object}

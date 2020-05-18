@@ -5,8 +5,12 @@
 \title{Returns dataframe with animals having a specific character in their
 permanent Id.}
 \usage{
-get_ids_having_specific_char(conn, char, exclude = character(0),
-  include = character(0))
+get_ids_having_specific_char(
+  conn,
+  char,
+  exclude = character(0),
+  include = character(0)
+)
 }
 \arguments{
 \item{conn}{database connection object}

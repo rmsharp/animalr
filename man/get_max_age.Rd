@@ -4,8 +4,12 @@
 \alias{get_max_age}
 \title{Get the maximum age within a species for a specific date range}
 \usage{
-get_max_age(conn, arc_species_code, start_date,
-  end_date = strftime(Sys.Date(), format = "\%m-\%d-\%Y"))
+get_max_age(
+  conn,
+  arc_species_code,
+  start_date,
+  end_date = strftime(Sys.Date(), format = "\%m-\%d-\%Y")
+)
 }
 \arguments{
 \item{conn}{database connection object}

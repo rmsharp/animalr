@@ -5,8 +5,11 @@
 \title{Get vasectomized males of a specified arc_species_code that died after a
 specified date.}
 \usage{
-get_vasectomized_males(conn, arc_species_code,
-  died_after_date = strftime(Sys.Date(), format = "\%m-\%d-\%Y"))
+get_vasectomized_males(
+  conn,
+  arc_species_code,
+  died_after_date = strftime(Sys.Date(), format = "\%m-\%d-\%Y")
+)
 }
 \arguments{
 \item{conn}{database connection object}

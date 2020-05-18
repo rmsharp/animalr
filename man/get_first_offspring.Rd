@@ -5,8 +5,13 @@
 \title{Get the first offspring for animals of a specified sex and arc_species_code
 within a specified date range of provided.}
 \usage{
-get_first_offspring(conn, arc_species_code, sex = "F", start_date = NULL,
-  end_date = NULL)
+get_first_offspring(
+  conn,
+  arc_species_code,
+  sex = "F",
+  start_date = NULL,
+  end_date = NULL
+)
 }
 \arguments{
 \item{conn}{database connection object}

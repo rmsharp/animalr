@@ -5,9 +5,9 @@
 #' Assumes access to master database table in animal database.
 #' @param conn database connection
 #' @param id_df dataframe with animal Ids in id column
-#' @import RODBC
-#' @import rmsutilityr
-#' @import stringi
+#' @importFrom RODBC sqlQuery
+#' @importFrom rmsutilityr blank_fill_ids vector2string
+#' @importFrom stringi stri_c
 #' @export
 add_death_date <- function(conn, id_df) {
   ids <- id_df$id[!is.na(id_df$id)]

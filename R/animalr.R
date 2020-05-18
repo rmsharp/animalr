@@ -490,24 +490,6 @@ add_sex <- function(conn, id_df) {
     "SELECT id, sex from master where id in ('", ids_str, "')"))
   merge(id_df, sex_df, by = 'id', sort = TRUE, all = TRUE)
 }
-#' Adds arc_species_code for each animal
-#' in character vector id of the provided dataframe id_df.
-#'
-#' Returns NA in vector if not available.
-#'
-#' Assumes access to master database table in animal database.
-#' @param conn database connection
-#' @param id_df dataframe with animal Ids in id column
-#' @import RODBC
-#' @import rmsutilityr
-#' @import stringi
-#' @export
-add_arc_species_code <- function(conn, id_df) {
-  ids_str <- vector2string(unique(blank_fill_ids(id_df$id)), SS = "','")
-  arc_species_code_df <- sqlQuery(conn, stri_c(
-    "SELECT id, arc_species_code from current_data where id in ('", ids_str, "')"))
-  merge(id_df, arc_species_code_df, by = 'id', sort = TRUE, all = TRUE)
-}
 #' Returns dataframe with and additional column (common_name) corresponding
 #' to each animal in the id column of the provided dataframe.
 #'
@@ -758,39 +740,6 @@ FROM master m
   disp_df <- sqlQuery(conn, sql_txt, stringsAsFactors = FALSE)
   names(disp_df) <- c("Code", "Description", "Count")
   disp_df
-}
-#' Returns the average number of cagemates each animal has for days
-#' between and including start and end dates.
-#'
-#' @param conn database connection
-#' @param ids character vector with an animal Id in each cell
-#' @param start character string representation of start date in mm-dd-yyyy
-#' format
-#' @param end character string representation of end date in mm-dd-yyyy
-#' format
-#' @import magrittr
-#' @import RODBC
-#' @import rmsutilityr
-#' @import stringi
-#' @export
-get_average_number_of_cagemates <- function(conn, ids, start, end) {
-  ids <- blank_fill_ids(ids)
-  ids_str <- vector2string(ids)
-  sql_txt <- stri_c(
-    "select t.id , t.midnight_location,
-    t.target_date, count(c.id) as cagemates
-    from daily_demo t
-    inner join daily_demo c on t.target_date = c.target_date
-    and t.midnight_location = c.midnight_location
-    and t.id <> c.id
-    where t.id in ('", ids_str, "')
-    and t.target_date between '", start, "' and '", end, "'
-    group by t.id, t.midnight_location, t.target_date")
-
-  ncm <- sqlQuery(conn, sql_txt, stringsAsFactors = FALSE)
-  avg_cagemates <- ncm %>% dplyr::group_by(id) %>%
-    dplyr::summarise(avg_cagemates = mean(cagemates))
-  avg_cagemates
 }
 #' Returns a character vector of table names for the database connection conn
 #' where the names do not include specified strings.

@@ -4,8 +4,7 @@
 \alias{get_tables_views_and_columns}
 \title{Get tables, views, and columns for a database connection.}
 \usage{
-get_tables_views_and_columns(conn, expunge_list = character(0),
-  owner = "DBO")
+get_tables_views_and_columns(conn, expunge_list = character(0), owner = "DBO")
 }
 \arguments{
 \item{conn}{database connection object}
