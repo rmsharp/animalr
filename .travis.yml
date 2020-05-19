@@ -4,7 +4,9 @@ cache:
   - packages
   - github_packages
 dist: trusty
-r: release
+r:
+    - release
+    - devel
 before_install:
   - sudo R CMD javareconf
   - Rscript -e 'install.packages("rJava", type = "source")'
