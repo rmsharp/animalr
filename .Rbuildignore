@@ -4,3 +4,4 @@
 ^\.travis\.yml$
 installation.*
 README.Rmd
+^NEWS\.Rmd$
