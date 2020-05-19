@@ -1,16 +1,25 @@
 language: r
-cache: packages
+sudo: required
+cache:
+  - packages
+  - github_packages
 dist: trusty
 r: release
 before_install:
   - sudo R CMD javareconf
   - Rscript -e 'install.packages("rJava", type = "source")'
+r_packages:
+    - devtools
+    - covr
+    - rcmdcheck
 r_github_packages:
-  - jimhester/covr,
   - rmsharp/rmsutilityr
+script:
+  - R CMD build . --compact-vignettes=gs+qpdf
+  - R CMD check *tar.gz --as-cran
 after_success:
   - Rscript -e 'covr::codecov()'
-sudo: false
+  - Rscript -e 'pkgdown::build_site()'
 os:
   - osx
 warnings_are_errors: true
