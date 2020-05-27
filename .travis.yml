@@ -24,4 +24,4 @@ after_success:
   - Rscript -e 'pkgdown::build_site()'
 os:
   - osx
-warnings_are_errors: true
+warnings_are_errors: false
