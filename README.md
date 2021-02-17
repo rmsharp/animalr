@@ -1,18 +1,22 @@
 
-[![Rdoc](http://www.rdocumentation.org/badges/version/roxygen2)](http://www.rdocumentation.org/packages/roxygen2) [![Build Status](https://travis-ci.org/rmsharp/animalr.svg?branch=master)](https://travis-ci.org/rmsharp/animalr) [![codecov](https://codecov.io/gh/rmsharp/animalr/branch/master/graph/badge.svg)](https://codecov.io/gh/rmsharp/animalr)
+[![Rdoc](http://www.rdocumentation.org/badges/version/roxygen2)](http://www.rdocumentation.org/packages/roxygen2)
+[![Build
+Status](https://travis-ci.org/rmsharp/animalr.svg?branch=master)](https://travis-ci.org/rmsharp/animalr)
+[![codecov](https://codecov.io/gh/rmsharp/animalr/branch/master/graph/badge.svg)](https://codecov.io/gh/rmsharp/animalr)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-animalr
-=======
 
-Installation
-------------
+# animalr
+
+## Installation
 
 ### Installation from Source
 
-**rmsutilityr** is a local source packages that must be installed prior to installing **animalr**.
+**rmsutilityr** is a local source packages that must be installed prior
+to installing **animalr**.
 
-For example, a very manual approach is to use the following code, which assumes you have all of the dependencies already installed:
+For example, a very manual approach is to use the following code, which
+assumes you have all of the dependencies already installed:
 
 ``` r
 install_path <- "c:/R Library"
@@ -25,9 +29,15 @@ install.packages(paste0(source_path, "/", source), type = "source", repos = NULL
                      lib = install_path)
 ```
 
-One or more of these will fail if you do not have the dependencies already installed, but the error message will provide the name(s) of the packages needed. However, as soon as one of the source packages is updated that code no longer work because the filename is wrong.
+One or more of these will fail if you do not have the dependencies
+already installed, but the error message will provide the name(s) of the
+packages needed. However, as soon as one of the source packages is
+updated that code no longer work because the filename is wrong.
 
-Assuming you have a version of **rmsutilityr** installed you can simply use the following code, which will find all of the dependencies, install them, locate the most recent source versions of the packages **rmsutilityr**, **animalr**, and **animalr**, and install them.
+Assuming you have a version of **rmsutilityr** installed you can simply
+use the following code, which will find all of the dependencies, install
+them, locate the most recent source versions of the packages
+**rmsutilityr**, **animalr**, and **animalr**, and install them.
 
 ``` r
 library(rmsutilityr)
@@ -49,7 +59,9 @@ install_from_source(source_names, source_path, install_path)
 
 ### Github.com Installation
 
-It is much easier to install directly from [github.com/rmsharp/animalr](https://github.com/rmsharp/animalr) as all of the dependencies are automatically installed as well.
+It is much easier to install directly from
+[github.com/rmsharp/animalr](https://github.com/rmsharp/animalr) as all
+of the dependencies are automatically installed as well.
 
 You can install **animalr** from github with:
 

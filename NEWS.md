@@ -1,0 +1,20 @@
+NEWS
+================
+R. Mark Sharp
+2021-02-16
+
+# animal 0.1.90 (2022-02-16)
+
+-   Major changes - None
+-   Minor changes
+    -   Changed license to MIT and added LICENSE file.
+
+# animal 0.1.88 (2020-05-17)
+
+-   Major changes - None
+-   Minor changes
+    -   Began adding “importFrom” style roxygen2 documentation to
+        replace use of “import”
+    -   Separated out add\_arc\_species\_code() and
+        get\_average\_number\_of\_cagemates()
+    -   Added “Encoding: UTF-8” to DESCRIPTION

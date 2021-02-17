@@ -1,7 +1,7 @@
 ---
 title: "NEWS"
 author: "R. Mark Sharp"
-date: "05/17/2020"
+date: "`r Sys.Date()`"
 output:
    github_document: default
 
@@ -10,6 +10,11 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# animal 0.1.90 (2022-02-16)
+-   Major changes - None
+-   Minor changes
+    -   Changed license to MIT and added LICENSE file.
+
 # animal 0.1.88 (2020-05-17)
 -   Major changes - None
 -   Minor changes
